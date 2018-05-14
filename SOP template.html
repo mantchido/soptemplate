@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SOP template</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script>
+          WebFont.load({
+            google: {"families":["Montserrat:300,400,500,600,700","Roboto:300,400,500,600,700"]},
+            active: function() {
+                sessionStorage.fonts = true;
+            }
+          });
+		</script>
+		<style>
+			.duplicate {
+				margin-top: 10px;
+				margin-bottom: 2px;
+			}
+			.duplicateTwo{
+				margin-top: 10px;
+				margin-bottom: 2px;
+			}
+		</style>
+		<link href="C:\Users\Pappi\Documents\GPI\metronic_v5.0.2\theme\dist\html\default\assets/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="C:\Users\Pappi\Documents\GPI\metronic_v5.0.2\theme\dist\html\default\assets/demo/demo4/base/style.bundle.css" rel="stylesheet" type="text/css" />
+		<!--end::Base Styles -->
+		<link rel="shortcut icon" href="assets/demo/demo4/media/img/logo/favicon.ico" />
+</head>
+<body>
+							<div class="m-content">
+								<div class="m-portlet m-portlet--tab">
+								<div class="m-portlet__head">
+									<div class="m-portlet__head-caption">
+										<div class="m-portlet__head-title">
+											<span class="m-portlet__head-icon m--hide">
+												<i class="la la-gear"></i>
+											</span>
+											<h3 class="m-portlet__head-text">
+												CESL Policies, Procedures and Forms
+											</h3>
+											<!-- <div id="cesl" style="height: 5px; float: right; width: 10px;">
+												<img src="cesl.jpg">
+											</div> -->
+										</div>
+									</div>
+								</div>
+								<!--begin::Form-->
+								<form class="m-form m-form--fit m-form--label-align-right">
+									<div class="m-portlet__body">
+										
+										<div class="form-group m-form__group">
+											<label for="exampleInputEmail1">
+												SOP number
+											</label>
+											<input type="number" class="form-control m-input m-input--air" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter SOP number">
+										</div>
+										<div class="form-group m-form__group">
+											<label for="exampleInputEmail1">
+												Revision
+											</label>
+											<input type="text" class="form-control m-input m-input--air" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Revision">
+										</div>
+										<div class="form-group m-form__group">
+											<label for="exampleInputEmail1">
+												Prepared By:
+											</label>
+											<input type="text" class="form-control m-input m-input--air" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=" ">
+										</div><div class="form-group m-form__group">
+											<label for="exampleInputEmail1">
+												Effective Date
+											</label>
+											<input type="Date" class="form-control m-input m-input--air" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=" ">
+										</div>
+										<div class="form-group m-form__group">
+											<label for="exampleInputEmail1">
+												Approved By:
+											</label>
+											<input type="text" class="form-control m-input m-input--air" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=" ">
+										</div>
+										<div class="form-group m-form__group">
+											<label for="exampleInputEmail1">
+												Title
+											</label>
+											<input type="text" class="form-control m-input m-input--air" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=" ">
+										</div>
+										<div class="form-group m-form__group">
+											<label for="exampleTextarea">
+												Policy
+											</label>
+											<textarea class="form-control m-input m-input--air" id="exampleTextarea" rows="2"></textarea>
+										</div>
+										<div class="form-group m-form__group">
+											<label for="exampleTextarea">
+												Purpose
+											</label>
+											<textarea class="form-control m-input m-input--air" id="exampleTextarea" rows="3"></textarea>
+										</div>
+									</div>
+										<div class="form-group m-form__group">
+											<label for="exampleInputEmail1">
+												Scope
+											</label>
+											<input type="text" class="form-control m-input m-input--air" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Scope">
+										</div>
+										<div class="form-group m-form__group">
+											<label for="exampleTextarea">
+												Responsibilities
+											</label>
+											<textarea class="form-control m-input m-input--air" id="exampleTextarea" rows="3"></textarea>
+										</div>
+										<div class="form-group m-form__group">
+											<label for="exampleTextarea">
+												Key Success Factors:
+											</label>
+											<textarea class="form-control m-input m-input--air" id="exampleTextarea" rows="3"></textarea>
+										</div>
+										<div class="form-group m-form__group">
+											<label for="exampleInputEmail1">
+												Key Performance Measure
+											</label>
+											<div class="duplicate" id="delete">
+											<input type="text" class="form-control m-input m-input--air Performance-Measure" id="PMeasure" aria-describedby="emailHelp" placeholder="Performance Measurement" name="inputOne[]"><textarea class="form-control m-input m-input--air" id="exampleTextarea" rows="2" placeholder="Key Performance Indicator" name="inputTwo[]"></textarea>
+										</div>
+										<p id="dupText"></p>
+										<div class="m-demo" data-code-preview="true" data-code-html="true" data-code-js="false" ">
+											<div class="m-demo__preview">
+												<div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
+													<button type="button" class="btn btn-outline-success" onclick="dupElement()">
+														Add New Key Performance Measure
+													</button>
+													<button type="button" class="btn btn-outline-success" onclick="insert()">
+														Save
+													</button>
+													<button type="button" class="btn btn-outline-success" onclick="delElement()">
+														Delete
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="form-group m-form__group">
+											<label for="exampleTextarea">
+												Procedures:
+											</label>
+											<textarea class="form-control m-input m-input--air" id="exampleTextarea" rows="3"></textarea>
+										</div>
+										<div class="form-group m-form__group">
+											<label for="exampleInputEmail1">
+												Revision History:
+											</label>
+											<div class="duplicateTwo" id="deleteTwo">
+											<input type="text" class="form-control m-input m-input--air Performance-Measure" id="PMeasure" aria-describedby="emailHelp" placeholder="Revision" name="revisionOne[]"><input type="Date" class="form-control m-input m-input--air Performance-Measure" id="PMeasure" aria-describedby="emailHelp" name="dateOne[]"><textarea class="form-control m-input m-input--air" id="exampleTextarea" rows="2" placeholder="Description of Changes" name="descriptionOne[]"></textarea><input type="text" class="form-control m-input m-input--air Performance-Measure" id="PMeasure" aria-describedby="emailHelp" placeholder="Requested By" name="requestOne[]">
+										</div>
+										<p id="dupTextTwo"></p>
+										<div class="m-demo" data-code-preview="true" data-code-html="true" data-code-js="false" ">
+											<div class="m-demo__preview">
+												<div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
+													<button type="button" class="btn btn-outline-success" onclick="dupElementTwo()">
+														Add New Revision History
+													</button>
+													<button type="button" class="btn btn-outline-success" onclick="insertTwo()">
+														Save
+													</button>
+													<button type="button" class="btn btn-outline-success" onclick="delElementTwo()">
+														Delete
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="form-group m-form__group">
+											<label for="exampleTextarea">
+												Appendix
+											</label>
+											<textarea class="form-control m-input m-input--air" id="exampleTextarea" rows="3"></textarea>
+										</div>
+										<div class="form-group m-form__group">
+											<label for="exampleInputEmail1">
+												Reviewed By:
+											</label>
+											<input type="text" class="form-control m-input m-input--air" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=" ">
+										</div>
+									</div>
+									<div class="m-portlet__foot m-portlet__foot--fit">
+										<div class="m-form__actions">
+											<button type="reset" class="btn btn-accent">
+												Submit
+											</button>
+											<button type="reset" class="btn btn-secondary">
+												Cancel
+											</button>
+										</div>
+									</div>
+								</form>
+								<!--end::Form-->
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<footer class="m-grid__item		m-footer " >
+				<div class="m-container m-container--fluid m-container--full-height m-page__container">
+					<div class="m-stack m-stack--flex-tablet-and-mobile m-stack--ver m-stack--desktop">
+						<div class="m-stack__item m-stack__item--left m-stack__item--middle m-stack__item--last">
+							<span class="m-footer__copyright">
+								2018 &copy; CESL SOP software by 
+								<a href="#" class="m-link" style="color: black; font-weight: bold;">
+									GPI
+								</a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</footer>
+		<script>
+				//This function dupElement() duplicates the entire box by class name
+			function dupElement() {
+			    'use strict';
+			    var itm = document.getElementsByClassName("duplicate")[0];
+			    var clonedItm = itm.cloneNode(true);
+			    document.getElementById("dupText").appendChild(clonedItm);
+			}
+			//Function isert() gets data from a grouped input and store them in to different array
+
+			function insert() {
+				var values = [];
+				var valuesTwo = [];
+					var fields = document.getElementsByName("inputOne[]");
+					var fieldsTwo = document.getElementsByName("inputTwo[]")
+					for(var i=0; i < fields.length; i++){
+						values.push(fields[i].value);
+																	
+						
+
+
+					}
+					for (var j=0; j < fieldsTwo.length; j++){
+						valuesTwo.push(fieldsTwo[j].value);
+						
+
+					}
+					//add all arrays into one multi-dimensional array
+					addAll=[];													
+						for (var i=0; i<values.length; i++){
+							addAll.push([values[i], valuesTwo[i] ] );
+							console.log(addAll);
+						}
+
+			}
+
+			//function dupElementTwo() is the same as function dupELement()
+			function dupElementTwo() {
+			    'use strict';
+			    var itm = document.getElementsByClassName("duplicateTwo")[0];
+			    var clonedItm = itm.cloneNode(true);
+			    document.getElementById("dupTextTwo").appendChild(clonedItm);
+			}
+			//This is the same as function insertTwo()
+			function insertTwo() {
+				var values = [];
+				var valuesTwo = [];
+				var valuesThree = [];
+				var valuesFour = [];
+					var fields = document.getElementsByName("revisionOne[]");
+					var fieldsTwo = document.getElementsByName("date[]");
+					var fieldsThree = document.getElementsByName("descriptionOne[]");
+					var fieldsFour = document.getElementsByName("requestOne")
+					for(var i=0; i < fields.length; i++){
+						values.push(fields[i].value);
+					}
+					for (var j=0; j < fieldsTwo.length; j++){
+						valuesTwo.push(fieldsTwo[j].value);
+					}
+					for (var x=0; x < fieldsThree.length; x++){
+						valuesThree.push(fieldsThree[x].value);
+					}
+					for (var y=0; y < fieldsFour.length; y++){
+						valuesFour.push(fieldsFour[y].value);
+					}
+					//add all arrays into one multi-dimensional array
+					addAll=[];													
+						for (var i=0; i<values.length; i++){
+							addAll.push([values[i], valuesTwo[i], valuesThree[i], valuesFour[i] ] );
+							console.log(addAll);
+						}
+			}
+			//function delELement() deletes the box created by function dupELement()
+			function delElement() {
+			    var itm = document.getElementById("delete");
+			    return itm.parentNode.removeChild(itm);
+			}
+			function delElementTwo() {
+			    var itm = document.getElementById("deleteTwo");
+			    return itm.parentNode.removeChild(itm);
+			}
+
+		
+		</script>
+		<!-- begin::Quick Nav -->
+		<!--begin::Base Scripts -->
+		<script src="assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
+		<script src="assets/demo/demo4/base/scripts.bundle.js" type="text/javascript"></script>
+		<!--end::Base Scripts -->
+		<!--begin::Page Snippets -->
+		<script src="assets/app/js/dashboard.js" type="text/javascript"></script>
+		</script>
+</body>
+</html>
